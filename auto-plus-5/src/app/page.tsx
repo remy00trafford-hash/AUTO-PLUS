@@ -20,6 +20,7 @@ function ProductCard({ p }: { p: (typeof products)[number] }) {
 
 export default function Home() {
   const featured = products.filter((p) => p.featured)
+  const moreProducts = products.filter((p) => !p.featured)
   return <main>
     <header className="header"><div className="nav">
       <Link href="/" className="brand"><img src="/logo.png" alt="Auto+" className="brand-logo"/>AUTO<span>+</span></Link>
@@ -38,6 +39,8 @@ export default function Home() {
     </section>
 
     <section id="selection" className="section selection"><div className="section-head"><div><span className="eyebrow">FEATURED</span><h2>Trending right now</h2></div><Link className="text-link" href="/products">View all <span>→</span></Link></div><div className="product-grid">{featured.map((p) => <ProductCard p={p} key={p.id}/>)}</div></section>
+
+    <section className="section selection"><div className="section-head"><div><span className="eyebrow">MORE FROM AUTO+</span><h2>More products to explore</h2></div><Link className="text-link" href="/products">Browse all 18 <span>→</span></Link></div><div className="product-grid">{moreProducts.map((p) => <ProductCard p={p} key={p.id}/>)}</div></section>
 
     <section id="categories" className="section categories"><div className="section-head"><div><span className="eyebrow">BROWSE</span><h2>Find what your car needs.</h2></div></div><div className="category-grid">{categories.map((c, i) => <Link href={`/products?category=${encodeURIComponent(c)}`} className="category" key={c}><span className="category-number">0{i + 1}</span><strong>{c}</strong><span className="arrow">↗</span></Link>)}</div></section>
 
