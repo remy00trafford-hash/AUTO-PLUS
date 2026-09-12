@@ -175,3 +175,5 @@ export const products: Product[] = [
     image: '/products/led-interior-lighting-kit-remote.jpg', featured: false,
   },
 ]
+
+// Trigger a fresh production deployment from the current main branch.
