@@ -58,9 +58,9 @@ export const products: Product[] = [
     image: 'https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/926f6105984e436e818d886884403c6d~tplv-fhlh96nyum-resize-webp%3A800%3A794.webp?dr=12190&from=2378011839&idc=useast5&ps=933b5bde&shcp=e1be8f53&shp=8dbd94bf&t=555f072d', featured: true,
   },
   {
-    id: 'p6', slug: 'housse-volant-led-38cm',
-    name: 'Universal LED Steering Wheel Cover, 38cm',
-    description: 'A comfort-first steering wheel cover with built-in LED lighting for a distinctive touch inside the cabin.',
+    id: 'p6', slug: 'housse-volant-universelle-38cm',
+    name: 'Universal Steering Wheel Cover, 38cm',
+    description: 'A universal 38cm steering wheel cover designed to improve grip and comfort while adding a clean interior finish.',
     offerLabel: 'STYLE', category: 'Comfort',
     affiliatePath: '/go/housse-volant-led-38cm',
     affiliateUrl: 'https://s.click.aliexpress.com/e/_c3cweypJ',
@@ -175,5 +175,3 @@ export const products: Product[] = [
     image: '/products/led-interior-lighting-kit-remote.jpg', featured: false,
   },
 ]
-
-// Trigger a fresh production deployment from the current main branch.
