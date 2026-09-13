@@ -36,7 +36,7 @@ export default function Home() {
       <div className="hero-art" aria-hidden="true"><div className="glow glow-a"/><div className="glow glow-b"/><div className="hero-card"><span>AUTO+</span><b>DRIVE.<br/>UPGRADE.<br/>ENJOY.</b><i>Great finds for your car.</i></div></div>
     </section>
 
-    <section id="selection" className="section selection"><div className="section-head"><div><span className="eyebrow">AUTO+ SELECTION</span><h2>Trending right now</h2></div><Link className="text-link" href="/products">View all 18 <span>→</span></Link></div><div className="product-rail">{products.map((p) => <ProductCard p={p} key={p.id}/>)}</div></section>
+    <section id="selection" className="section selection"><div className="section-head"><div><span className="eyebrow">AUTO+ SELECTION</span><h2>Trending right now</h2></div><Link className="text-link" href="/products">View all 18 <span>→</span></Link></div><div className="product-grid">{products.map((p) => <ProductCard p={p} key={p.id}/>)}</div></section>
 
     <section id="categories" className="section categories"><div className="section-head"><div><span className="eyebrow">BROWSE</span><h2>Find what your car needs.</h2></div></div><div className="category-grid">{categories.map((c, i) => <Link href={`/products?category=${encodeURIComponent(c)}`} className="category" key={c}><span className="category-number">0{i + 1}</span><strong>{c}</strong><span className="arrow">↗</span></Link>)}</div></section>
 
